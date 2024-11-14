@@ -4,31 +4,24 @@
 
 def ordenar_matriz(matriz, orden):
     if orden == "Asc":
-        # Ordena cada fila de la matriz en orden ascendente
-        for fila in matriz:
-            fila.sort()  # Ordena la fila de menor a mayor
+        # Ordena toda la matriz (lista) en orden ascendente
+        matriz.sort()  # Ordena la lista de menor a mayor
     elif orden == "Desc":
-        # Ordena cada fila de la matriz en orden descendente
-        for fila in matriz:
-            fila.sort(reverse=True)  # Ordena la fila de mayor a menor
+        # Ordena toda la matriz (lista) en orden descendente
+        matriz.sort(reverse=True)  # Ordena la lista de mayor a menor
     else:
         raise ValueError("El parámetro 'orden' debe ser 'Asc' o 'Desc'")
     
     return matriz
 
 
-
-
-matriz = [5, 3, 8, 1]
+# Definir una matriz unidimensional
+matriz = [5, 3, 8, 1, 7, 2, 4, 6]
 
 # Ordenar la matriz de menor a mayor (ascendente)
 matriz_asc = ordenar_matriz(matriz, "Asc")
-print("Matriz ordenada de menor a mayor:")
-for fila in matriz_asc:
-    print(fila)
+print("Matriz ordenada de menor a mayor:", matriz_asc)
 
 # Ordenar la matriz de mayor a menor (descendente)
 matriz_desc = ordenar_matriz(matriz, "Desc")
-print("\nMatriz ordenada de mayor a menor:")
-for fila in matriz_desc:
-    print(fila)
+print("Matriz ordenada de mayor a menor:", matriz_desc)
